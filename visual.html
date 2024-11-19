@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <header><a href="index.html">RETURN</a></header>
+
+    <div class="image-grid">
+        <img src="img/1.png" alt="Image 1" onclick="openImagePopup('img/1.png')">
+        <img src="img/2.png" alt="Image 2" onclick="openImagePopup('img/2.png')">
+        <img src="img/3.png" alt="Image 3" onclick="openImagePopup('img/3.png')">
+        <img src="img/4.png" alt="Image 4" onclick="openImagePopup('img/4.png')">
+        <img src="img/5.png" alt="Image 5" onclick="openImagePopup('img/5.png')">
+        <img src="img/6.png" alt="Image 6" onclick="openImagePopup('img/6.png')">
+    </div>
+
+    <div class="popup" id="image-popup">
+        <button class="close-btn" onclick="closeImagePopup()">&times;</button>
+        <img id="popup-image" src="" alt="Popup Image">
+    </div>
+
+    <script>
+        function openImagePopup(imageURL) {
+            const popup = document.getElementById('image-popup');
+            const popupImage = document.getElementById('popup-image');
+
+            popupImage.src = imageURL;
+            popup.style.display = 'flex'; 
+        }
+
+        function closeImagePopup() {
+            const popup = document.getElementById('image-popup');
+            popup.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
