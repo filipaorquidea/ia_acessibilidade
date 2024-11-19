@@ -1,7 +1,9 @@
 let utterance; // SpeechSynthesisUtterance instance
 let isPlaying = false; // Track play state
-const textContainer = document.getElementById('textContainer'); // Text container
+const textContainer = document.getElementById('textContainer');
 console.log(speechSynthesis.getVoices());
+let words = []; // Array of words
+let wordElements = []; // Array of spans
 
 // Function to toggle speech
 function toggleSpeech() {
